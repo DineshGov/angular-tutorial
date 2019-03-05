@@ -1,3 +1,4 @@
+<!--
 <div>
   <label style="font-weight: bold">James Braddock</label>
   <pre>{{tweets[0].created_at|date:'dd/MM/yyyy'}}</pre>
@@ -15,8 +16,9 @@
   <pre>Wed Apr 05 12:30:12 +0000 2017</pre>
   <strong>La pulga est un extraterrestre</strong>
 </div>
+-->
 
-<ul>
+<!--<ul>
 
   <li *ngFor="let tweet of tweets">
 
@@ -26,4 +28,27 @@
       <strong>{{tweet.text}}</strong>
     </div>
 
-</ul>
+</ul>-->
+
+
+
+
+  <div *ngFor="let tweet of tweets">
+
+    <div>
+        <label style="font-weight: bold">{{tweet.user}}</label>
+        <pre>{{tweet.created_at|timeAgo}}</pre>
+      <p>{{tweet.text}}</p>
+    </div>
+      <br>
+
+  </div>
+
+
+<label>Type something:
+    <br>
+    <textarea cols="50" rows="4" #tweetText></textarea>
+</label>
+
+<br>
+<button (click)="onSave(tweetText.value)" type="button" style="width: 80px; height: 30px">Tweet</button>
