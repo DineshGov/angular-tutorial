@@ -7,7 +7,7 @@ import {Tweet} from '../tweet';
     styleUrls: ['./timeline.component.less']
 })
 export class TimelineComponent implements OnInit {
-
+    username: string;
     tweets: Tweet[] = [
         {
             created_at: 'Wed Apr 05 12:30:12 +0000 2017',
@@ -27,14 +27,14 @@ export class TimelineComponent implements OnInit {
 
     constructor() { }
 
-    onSave(tweetText: HTMLInputElement) {
+    onSave(tweetText: HTMLInputElement, username: string) {
         /*const date = new Date();
         const tweetAuthor = 'Dinesh';*/
         const newTweet = {};
         newTweet.created_at = new Date();
         newTweet.id = this.tweets.length + 1;
         newTweet.text = tweetText;
-        newTweet.user = 'Dinesh';
+        newTweet.user = username;
         newTweet.nbrLike = 0;
 
         this.tweets.push(newTweet);

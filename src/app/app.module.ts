@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponentComponent } from './first-component/first-component.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { TweetComponent } from './tweet/tweet.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { TimelineComponent } from './timeline/timeline.component';
     FirstComponentComponent,
     TimelineComponent,
     TimeAgoPipe,
+    TweetComponent,
   ],
   imports: [
     BrowserModule,

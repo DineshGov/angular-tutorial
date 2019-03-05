@@ -1,41 +1,12 @@
-<!--
-<div>
-  <label style="font-weight: bold">James Braddock</label>
-  <pre>{{tweets[0].created_at|date:'dd/MM/yyyy'}}</pre>
-  <p>Je mets les pieds où je veux, Little John… et c'est souvent dans la gueule.</p>
-</div>
-
-<div>
-  <label style="font-weight: bold">Bob kelso</label>
-  <pre>{{tweets[1].created_at|date:'dd/MM/yyyy'}}</pre>
-  <p>Qui a deux pouces et qui s'en fout ? Bob Kelso !</p>
-</div>
-
-<div>
-  <label style="font-weight: bold">Lionel Messi</label>
-  <pre>Wed Apr 05 12:30:12 +0000 2017</pre>
-  <strong>La pulga est un extraterrestre</strong>
-</div>
--->
-
-<!--<ul>
-
-  <li *ngFor="let tweet of tweets">
-
-    <div>
-      <label style="font-weight: bold">{{tweet.user}}</label>
-      <pre>{{tweet.created_at|date:'dd/MM/yyyy'}}</pre>
-      <strong>{{tweet.text}}</strong>
-    </div>
-
-</ul>-->
 
 
+<input [(ngModel)]="username">
+<pre [hidden]="!username" >Connectez vous svp</pre>
+<pre [hidden]="username" >Bienvenue {{ username }}</pre>
 
+<div *ngFor="let tweet of tweets">
 
-  <div *ngFor="let tweet of tweets">
-
-    <div style="border: 1px solid #bcbcbc; border-radius: 8px; padding: 10px;">
+    <div style="border: 1px solid #bcbcbc; border-radius: 8px; padding: 10px; background-color: #f1f1f1">
       <label style="font-weight: bold">{{tweet.user}}</label>
         &middot;
       <small>{{tweet.created_at|timeAgo}}</small>
@@ -53,10 +24,12 @@
   </div>
 
 
-<label>Type something:
+<label style="color: white">Type something:
     <br>
     <textarea cols="50" rows="4" #tweetText></textarea>
 </label>
 
 <br>
-<button (click)="onSave(tweetText.value)" type="button" style="width: 80px; height: 30px">Tweet</button>
+<div class="btn-container">
+    <button [disabled]="!username" (click)="onSave(tweetText.value, username)" >Tweet</button>
+</div>
