@@ -35,10 +35,12 @@
 
   <div *ngFor="let tweet of tweets">
 
-    <div>
+    <div style="border: 1px solid #bcbcbc; border-radius: 8px; padding: 10px;">
       <label style="font-weight: bold">{{tweet.user}}</label>
-      <pre>{{tweet.created_at|timeAgo}}</pre>
-      <p>{{tweet.text}}</p>
+        &middot;
+      <small>{{tweet.created_at|timeAgo}}</small>
+      <hr>
+      <pre>{{tweet.text}}</pre>
       <label style="color: black">
         <i class="far fa-heart" style="color: black; margin-right: 5px;" (click)="onLike(tweet, like, unlike)" (mouseenter)="onHover(like)" #like></i>
         <i class="fas fa-heart-broken" style="color: black" (click)="onDislike(tweet, like, unlike)" (mouseenter)="onHover(unlike)" #unlike></i>
