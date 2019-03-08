@@ -1,3 +1,14 @@
-<p>
-  tweet works!
-</p>
+<div style="border: 1px solid #bcbcbc; border-radius: 8px; padding: 10px; background-color: #f1f1f1">
+  <label style="font-weight: bold">{{tweet.user}}</label>
+  &middot;
+  <small>{{tweet.created_at|timeAgo}}</small>
+  <hr>
+  <pre>{{tweet.text}}</pre>
+  <label style="color: black">
+    <i class="far fa-heart" style="color: black; margin-right: 5px;" (click)="onLike(tweet, like, unlike)" (mouseenter)="onHover(like)" #like></i>
+    <i class="fas fa-heart-broken" style="color: black" (click)="onDislike(tweet, like, unlike)" (mouseenter)="onHover(unlike)" #unlike></i>
+    {{tweet.nbrLike}}
+  </label>
+
+</div>
+<br>
