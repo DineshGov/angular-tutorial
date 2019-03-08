@@ -1,8 +1,5 @@
+<app-user-box></app-user-box>
 
-
-<input [(ngModel)]="username">
-<pre *ngIf="!username" >Connectez vous svp</pre>
-<pre *ngIf="username" >Bienvenue {{ username }}</pre>
 
 <div *ngFor="let tweet of tweets">
 
@@ -18,5 +15,5 @@
 
 <br>
 <div class="btn-container">
-    <button [disabled]="!username" (click)="onSave(tweetText.value, username)" >Tweet</button>
+    <button [disabled]="!user" (click)="onSave(tweetText.value, user)" >Tweet</button>
 </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {User} from "../user";
 
 @Component({
   selector: 'app-user-box',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-box.component.less']
 })
 export class UserBoxComponent implements OnInit {
+  @Input()
+  user: User;
 
   constructor() { }
 
