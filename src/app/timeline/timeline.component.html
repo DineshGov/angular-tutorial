@@ -1,8 +1,8 @@
 
 
 <input [(ngModel)]="username">
-<pre [hidden]="!username" >Connectez vous svp</pre>
-<pre [hidden]="username" >Bienvenue {{ username }}</pre>
+<pre *ngIf="!username" >Connectez vous svp</pre>
+<pre *ngIf="username" >Bienvenue {{ username }}</pre>
 
 <div *ngFor="let tweet of tweets">
 
