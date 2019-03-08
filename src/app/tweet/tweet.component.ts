@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {Tweet} from '../tweet';
+
 @Component({
   selector: 'app-tweet',
   templateUrl: './tweet.component.html',
