@@ -8,8 +8,7 @@ import { AppComponent } from './app.component';
 import { FirstComponentComponent } from './first-component/first-component.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TweetComponent } from './tweet/tweet.component';
-import { UserComponent } from './user/user.component';
-
+import { UserBoxComponent } from './user-box/user-box.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,7 @@ import { UserComponent } from './user/user.component';
     TimelineComponent,
     TimeAgoPipe,
     TweetComponent,
-    UserComponent,
+    UserBoxComponent,
   ],
   imports: [
     BrowserModule,
