@@ -1,0 +1,14 @@
+<label style="color: white">Type something:
+  <br>
+  <textarea cols="50" rows="4" #tweetText></textarea>
+</label>
+
+<br>
+<div class="btn-container">
+  <button [disabled]="!user" (click)="onSave(tweetText.value, user)" >Tweet</button>
+</div>
+
+<a routerLink="/timeline">
+  <i class="fas fa-arrow-circle left"></i>
+  <span>Retour</span>
+</a>

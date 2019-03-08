@@ -1,3 +1,6 @@
 <input [(ngModel)]="name">
+
 <pre *ngIf="!name" >Connectez vous svp</pre>
-<pre *ngIf="name" >Bienvenue {{ name}}</pre>
+<pre *ngIf="name" >Bienvenue {{ name }}</pre>
+
+<input [(ngModel)]="name" (ngModelChange)="handleUserChange($event)" placeholder="Votre nom">

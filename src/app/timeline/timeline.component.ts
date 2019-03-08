@@ -23,19 +23,6 @@ export class TimelineComponent implements OnInit {
         this.getTweets();
     }
 
-    onSave(tweetText: HTMLInputElement, user: object) {
-        /*const date = new Date();
-        const tweetAuthor = 'Dinesh';*/
-        const newTweet = {};
-        newTweet.created_at = new Date();
-        newTweet.id = this.tweets.length + 1;
-        newTweet.text = tweetText;
-        newTweet.user = user.name;
-        newTweet.nbrLike = 0;
 
-        this.tweets.push(newTweet);
-
-        console.log(this.tweets);
-    }
 
 }

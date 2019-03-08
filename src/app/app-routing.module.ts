@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import {TimelineComponent} from './timeline/timeline.component';
+import {CreateTweetComponent} from "./create-tweet/create-tweet.component";
 
 const routes: Routes = [
     { path: '', redirectTo: '/timeline', pathMatch: 'full' },
     { path: 'timeline', component: TimelineComponent},
+    { path: 'createTweet', component: CreateTweetComponent},
 ];
 
 @NgModule({

@@ -5,19 +5,21 @@ import { TimeAgoPipe } from 'time-ago-pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstComponentComponent } from './first-component/first-component.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TweetComponent } from './tweet/tweet.component';
 import { UserBoxComponent } from './user-box/user-box.component';
+import { TweetDetailComponent } from './tweet-detail/tweet-detail.component';
+import { CreateTweetComponent } from './create-tweet/create-tweet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponentComponent,
     TimelineComponent,
     TimeAgoPipe,
     TweetComponent,
     UserBoxComponent,
+    TweetDetailComponent,
+    CreateTweetComponent,
   ],
   imports: [
     BrowserModule,

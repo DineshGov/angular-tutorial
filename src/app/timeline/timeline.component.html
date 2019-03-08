@@ -1,6 +1,6 @@
 <app-user-box></app-user-box>
 
-
+<a href="/createTweet"><i class="fas fa-bong"></i></a>
 <div *ngFor="let tweet of tweets">
 
     <app-tweet [tweet]="tweet"></app-tweet>
@@ -8,12 +8,4 @@
 </div>
 
 
-<label style="color: white">Type something:
-    <br>
-    <textarea cols="50" rows="4" #tweetText></textarea>
-</label>
 
-<br>
-<div class="btn-container">
-    <button [disabled]="!user" (click)="onSave(tweetText.value, user)" >Tweet</button>
-</div>

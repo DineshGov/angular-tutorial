@@ -25,6 +25,10 @@ export class TweetService {
 
     constructor() { }
 
+    save(tweet: Tweet) {
+        this.tweets.push(tweet);
+    }
+
     getTweets() {
         return this.tweets;
     }
